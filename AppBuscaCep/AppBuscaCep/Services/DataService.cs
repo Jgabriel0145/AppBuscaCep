@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppBuscaCep.Services
 {
-    internal class DataService
+    public class DataService
     {
     }
 }
