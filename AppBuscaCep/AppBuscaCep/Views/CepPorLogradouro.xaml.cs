@@ -16,5 +16,10 @@ namespace AppBuscaCep.Views
         {
             InitializeComponent();
         }
+
+        private void btnBuscar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
