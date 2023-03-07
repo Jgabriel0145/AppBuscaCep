@@ -12,7 +12,7 @@
 
             <ListView x:Name="lst_ceps">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *, * Auto" RowDefinitions="Auto">
+                    <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
                         <Label Grid.Row="0" Grid.Column="0" Text="CEP"/>
                         <Label Grid.Row="0" Grid.Column="1" Text="Logradouro"/>
                         <Label Grid.Row="0" Grid.Column="2" Text="Cidade"/>
@@ -23,7 +23,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnDefinitions="Auto, *, * Auto" RowDefinitions="Auto">
+                            <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding CEP}"/>
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao_logradouro}"/>
                                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding descricao_cidade}"/>
@@ -33,7 +33,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,11 +19,6 @@ namespace AppBuscaCep
             InitializeComponent();
         }
 
-        private void BtnInicio_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Inicial());
-        }
-
         private void BtnEnderecoByCep_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new EnderecoPorCep());

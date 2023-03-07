@@ -3,15 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBuscaCep.Menu">
     <ContentPage.Content>
-        <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *">
+        <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *, *">
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Api Busca CEP"/>
             
-            <Button Grid.Row="1" Grid.Column="0" Text="Inicio" x:Name="BtnInicio" Clicked="BtnInicio_Clicked"/>
-            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Cep" x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked"/>
-            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Bairros" x:Name="BtnBairrosByCidade" Clicked="BtnBairrosByCidade_Clicked"/>
-            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Ruas de Bairro" x:Name="BtnLogradouroByBairroAndCidade" Clicked="BtnLogradouroByBairroAndCidade_Clicked"/>
-            <Button Grid.Row="3" Grid.Column="0" Text="Buscar " x:Name="BtnCepByLogradouro" Clicked="BtnCepByLogradouro_Clicked"/>
-            <Button Grid.Row="3" Grid.Column="0" Text="Buscar " x:Name="BtnCidadeByEstado" Clicked="BtnCidadeByEstado_Clicked"/>            
+            <Button Grid.Row="1" Grid.Column="0" Text="Buscar Endereço" 
+                    x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked"/>
+            
+            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Bairros" 
+                    x:Name="BtnBairrosByCidade" Clicked="BtnBairrosByCidade_Clicked"/>
+            
+            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas de Bairro" 
+                    x:Name="BtnLogradouroByBairroAndCidade" Clicked="BtnLogradouroByBairroAndCidade_Clicked"/>
+            
+            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Cep" 
+                    x:Name="BtnCepByLogradouro" Clicked="BtnCepByLogradouro_Clicked"/>
+            
+            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Cidade" 
+                    x:Name="BtnCidadeByEstado" Clicked="BtnCidadeByEstado_Clicked"/>            
 
         </Grid>
     </ContentPage.Content>
