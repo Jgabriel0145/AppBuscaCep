@@ -10,9 +10,11 @@
                              Padding="10"
                              Margin="10,50,10,0">
 
-                    <Button Text="Endereço por CEP" x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked" />
-
-
+                    <Button Text="Início" x:Name="BtnInicio" Clicked="BtnInicio_Clicked"/>
+                    <Button Text="Endereço por CEP" x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked"/>
+                    <Button Text="Bairros por Cidade" x:Name="BtnBairrosByCidade" Clicked="BtnBairrosByCidade_Clicked"/>
+                    <Button Text="Logradouro por Bairro e Cidade" x:Name="BtnLogradouroByBairroAndCidade" Clicked="BtnLogradouroByBairroAndCidade_Clicked"/>
+                    <Button Text="Cep por Logradouro" x:Name="BtnCepByLogradouro" Clicked="BtnCepByLogradouro_Clicked"/>
 
                 </StackLayout>
             </Grid>
