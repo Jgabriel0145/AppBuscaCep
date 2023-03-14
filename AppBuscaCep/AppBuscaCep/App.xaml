@@ -4,5 +4,11 @@
              x:Class="AppBuscaCep.App">
     <Application.Resources>
 
+        <Style x:Key="Label_preta" TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -10,6 +10,8 @@
                 <Button Text="Buscar" x:Name="btnBuscar" Clicked="btnBuscar_Clicked"/>
             </StackLayout>
 
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
+
             <ListView x:Name="lst_ceps">
                 <ListView.Header>
                     <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
@@ -25,7 +27,7 @@
                         <ViewCell>
                             <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding CEP}"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao_logradouro}"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao}"/>
                                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding descricao_cidade}"/>
                                 <Label Grid.Row="0" Grid.Column="3" Text="{Binding UF}"/>
                             </Grid>

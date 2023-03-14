@@ -4,7 +4,8 @@
              x:Class="AppBuscaCep.Menu">
     <ContentPage.Content>
         <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *, *">
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Api Busca CEP"/>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Api Busca CEP"
+                   Style="{StaticResource Label_preta}" />
             
             <Button Grid.Row="1" Grid.Column="0" Text="Buscar Endereço" 
                     x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked"/>
@@ -12,7 +13,7 @@
             <Button Grid.Row="1" Grid.Column="1" Text="Buscar Bairros" 
                     x:Name="BtnBairrosByCidade" Clicked="BtnBairrosByCidade_Clicked"/>
             
-            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas de Bairro" 
+            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas" 
                     x:Name="BtnLogradouroByBairroAndCidade" Clicked="BtnLogradouroByBairroAndCidade_Clicked"/>
             
             <Button Grid.Row="2" Grid.Column="1" Text="Buscar Cep" 
