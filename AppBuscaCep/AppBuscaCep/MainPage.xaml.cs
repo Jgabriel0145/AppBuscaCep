@@ -11,21 +11,18 @@ using AppBuscaCep.Views;
 namespace AppBuscaCep
 {
     [DesignTimeVisible(false)]
-    public partial class MainPage : MasterDetailPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Inicial)));
         }
 
         private async void BtnInicio_Clicked(object sender, EventArgs e)
         {
             try
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Inicial)));
-                IsPresented = false;
+                
             }
             catch (Exception ex)
             {
@@ -37,8 +34,7 @@ namespace AppBuscaCep
         {
             try
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(EnderecoPorCep)));
-                IsPresented = false;
+                
             }
             catch (Exception ex)
             {
@@ -50,8 +46,7 @@ namespace AppBuscaCep
         {
             try
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(BairrosPorCidade)));
-                IsPresented = false;
+                
             }
             catch (Exception ex)
             {
@@ -63,8 +58,7 @@ namespace AppBuscaCep
         {
             try
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(LogradourosByBairroAndCidade)));
-                IsPresented = false;
+                
             }
             catch (Exception ex)
             {
@@ -76,8 +70,7 @@ namespace AppBuscaCep
         {
             try
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(CepPorLogradouro)));
-                IsPresented = false;
+                
             }
             catch (Exception ex)
             {
