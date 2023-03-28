@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 using AppBuscaCep.Model;
 using AppBuscaCep.Services;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace AppBuscaCep.Views
 {
@@ -32,6 +33,7 @@ namespace AppBuscaCep.Views
                 lista_cidades.Clear();
 
                 arr_cidades.ForEach(i => lista_cidades.Add(i));
+                pck_cidade.ItemsSource = lista_cidades;
             }
             catch (Exception ex) 
             {
@@ -50,6 +52,7 @@ namespace AppBuscaCep.Views
                 lista_cidades.Clear();
 
                 arr_bairros.ForEach(i => lista_bairros.Add(i));
+                lst_bairros.ItemsSource = lista_bairros;
             }
             catch (Exception ex)
             {

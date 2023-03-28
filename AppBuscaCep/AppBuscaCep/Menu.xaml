@@ -7,19 +7,19 @@
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Api Busca CEP"
                    Style="{StaticResource Label_preta}" />
             
-            <Button Grid.Row="1" Grid.Column="0" Text="Buscar Endereço" 
+            <Button Grid.Row="1" Grid.Column="0" Text="Buscar Endereço Por CEP" 
                     x:Name="BtnEnderecoByCep" Clicked="BtnEnderecoByCep_Clicked"/>
             
-            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Bairros" 
+            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Bairros Por Cidade" 
                     x:Name="BtnBairrosByCidade" Clicked="BtnBairrosByCidade_Clicked"/>
             
-            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas" 
+            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas Por Bairro e Cidade" 
                     x:Name="BtnLogradouroByBairroAndCidade" Clicked="BtnLogradouroByBairroAndCidade_Clicked"/>
             
-            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Cep" 
+            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Cep Por Rua" 
                     x:Name="BtnCepByLogradouro" Clicked="BtnCepByLogradouro_Clicked"/>
             
-            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Cidade" 
+            <Button Grid.Row="3" Grid.Column="0" Text="Buscar Cidade Por Estado" 
                     x:Name="BtnCidadeByEstado" Clicked="BtnCidadeByEstado_Clicked"/>            
 
         </Grid>
