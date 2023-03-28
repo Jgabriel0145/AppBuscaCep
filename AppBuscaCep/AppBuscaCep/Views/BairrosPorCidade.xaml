@@ -42,7 +42,7 @@
                         ItemDisplayBinding="{Binding descricao_bairro}"></Picker>
             </StackLayout>
 
-            <ActivityIndicator x:Name="carregando" IsRunning="False" />
+            <ActivityIndicator x:Name="carregando" IsRunning="False" Color="Blue"/>
 
             <ListView x:Name="lst_bairros">
                 <ListView.Header>
