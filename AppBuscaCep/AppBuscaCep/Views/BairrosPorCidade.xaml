@@ -39,7 +39,7 @@
                 </Picker>
 
                 <Picker x:Name="pck_cidade" SelectedIndexChanged="pck_cidade_SelectedIndexChanged" Title="Selecione a cidade..."
-                        ItemDisplayBinding="{Binding descricao_bairro}"></Picker>
+                        ItemDisplayBinding="{Binding descricao}"></Picker>
             </StackLayout>
 
             <ActivityIndicator x:Name="carregando" IsRunning="False" Color="Blue"/>

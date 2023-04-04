@@ -20,6 +20,9 @@ namespace AppBuscaCep.Views
         public BairrosPorCidade()
         {
             InitializeComponent();
+
+            pck_cidade.ItemsSource = lista_cidades;
+            lst_bairros.ItemsSource = lista_bairros;
         }
 
         private async void pck_estado_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,15 +32,24 @@ namespace AppBuscaCep.Views
                 Picker disparador = sender as Picker;
                 string estado_selecionado = disparador.SelectedItem as string;
 
-                List<Cidade> arr_cidades = await DataService.GetCidadeByEstado(estado_selecionado);
-                lista_cidades.Clear();
+                if (estado_selecionado != null)
+                {
+                    carregando.IsRunning = true;
 
-                arr_cidades.ForEach(i => lista_cidades.Add(i));
-                pck_cidade.ItemsSource = lista_cidades;
+                    List<Cidade> arr_cidades = await DataService.GetCidadeByEstado(estado_selecionado);
+                    lista_cidades.Clear();
+
+                    arr_cidades.ForEach(i => lista_cidades.Add(i));
+                                     
+                }
             }
             catch (Exception ex) 
             {
                 await DisplayAlert("Ops!", ex.Message, "OK");
+
+            } finally
+            {
+                carregando.IsRunning = false;
             }
         }
 
@@ -48,11 +60,14 @@ namespace AppBuscaCep.Views
                 Picker disparador = sender as Picker;
                 Cidade cidade_selecionada = disparador.SelectedItem as Cidade;
 
-                List<Bairro> arr_bairros = await DataService.GetBairroByIdCidade(cidade_selecionada.id_cidade);
-                lista_cidades.Clear();
+                if (cidade_selecionada != null)
+                {
+                    List<Bairro> arr_bairros = await DataService.GetBairroByIdCidade(cidade_selecionada.id_cidade);
+                    
+                    lista_bairros.Clear();
 
-                arr_bairros.ForEach(i => lista_bairros.Add(i));
-                lst_bairros.ItemsSource = lista_bairros;
+                    arr_bairros.ForEach(i => lista_bairros.Add(i));                   
+                }
             }
             catch (Exception ex)
             {
