@@ -46,20 +46,20 @@
 
             <ListView x:Name="lst_bairros">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
-                        <Label Grid.Row="0" Grid.Column="0" Text="CEP"/>
-                        <Label Grid.Row="0" Grid.Column="1" Text="Logradouro"/>
-                        <Label Grid.Row="0" Grid.Column="2" Text="Cidade"/>
-                        <Label Grid.Row="0" Grid.Column="3" Text="UF"/>
+                    <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Logradouro" FontSize="Medium" 
+                               TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="5"/>
                     </Grid>
                 </ListView.Header>
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
-                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao_bairro}"/>
-                            </Grid>
+                            <ScrollView>
+                                <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao_bairro}" HorizontalOptions="CenterAndExpand"/>
+                                </Grid>
+                            </ScrollView>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

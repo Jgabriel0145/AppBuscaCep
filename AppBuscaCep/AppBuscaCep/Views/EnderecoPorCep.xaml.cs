@@ -27,6 +27,7 @@ namespace AppBuscaCep.Views
             {
                 Endereco end = await DataService.GetEnderecoByCep(txt_cep.Text);
 
+                this.BindingContext = end;
                 //lst_enderecos.ItemsSource = end;
             }
             catch (Exception ex)

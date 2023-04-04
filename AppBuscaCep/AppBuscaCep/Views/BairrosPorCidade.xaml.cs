@@ -23,6 +23,8 @@ namespace AppBuscaCep.Views
 
             pck_cidade.ItemsSource = lista_cidades;
             lst_bairros.ItemsSource = lista_bairros;
+
+            pck_cidade.IsEnabled = false;
         }
 
         private async void pck_estado_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,9 +49,11 @@ namespace AppBuscaCep.Views
             {
                 await DisplayAlert("Ops!", ex.Message, "OK");
 
-            } finally
+            } 
+            finally
             {
                 carregando.IsRunning = false;
+                pck_cidade.IsEnabled = true;
             }
         }
 
@@ -62,6 +66,7 @@ namespace AppBuscaCep.Views
 
                 if (cidade_selecionada != null)
                 {
+                    carregando.IsRunning = true;
                     List<Bairro> arr_bairros = await DataService.GetBairroByIdCidade(cidade_selecionada.id_cidade);
                     
                     lista_bairros.Clear();
@@ -72,6 +77,10 @@ namespace AppBuscaCep.Views
             catch (Exception ex)
             {
                 await DisplayAlert("Ops!", ex.Message, "OK");
+            }
+            finally
+            {
+                carregando.IsRunning = false;
             }
         }
     }

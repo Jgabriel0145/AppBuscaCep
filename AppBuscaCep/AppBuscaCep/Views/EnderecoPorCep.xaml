@@ -12,6 +12,28 @@
 
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
 
+            <Grid ColumnDefinitions="Auto, *, *, *, *, Auto" RowDefinitions="Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="CEP"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Logradouro"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Logradouro sem nº"/>
+                <Label Grid.Row="0" Grid.Column="3" Text="Bairro"/>
+                <Label Grid.Row="0" Grid.Column="4" Text="Cidade"/>
+                <Label Grid.Row="0" Grid.Column="5" Text="UF"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto, *, *, *, *, Auto" RowDefinitions="Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding CEP}"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding descricao}"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding descricao_sem_numero}"/>
+                <Label Grid.Row="0" Grid.Column="3" Text="{Binding descricao_bairro}"/>
+                <Label Grid.Row="0" Grid.Column="4" Text="{Binding descricao_cidade}"/>
+                <Label Grid.Row="0" Grid.Column="5" Text="{Binding UF}"/>
+            </Grid>
+
+
+
+
+            <!--
             <ListView x:Name="lst_enderecos">
                 <ListView.Header>
                     <Grid ColumnDefinitions="Auto, *, *, *, *, Auto" RowDefinitions="Auto">
@@ -38,7 +60,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
 
         </StackLayout>
     </ContentPage.Content>
