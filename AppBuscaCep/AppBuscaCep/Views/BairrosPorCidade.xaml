@@ -47,8 +47,7 @@
             <ListView x:Name="lst_bairros">
                 <ListView.Header>
                     <Grid ColumnDefinitions="*" RowDefinitions="Auto">
-                        <Label Grid.Row="0" Grid.Column="0" Text="Logradouro" FontSize="Medium" 
-                               TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="5"/>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Logradouro" Style="{StaticResource lbl_Titulo_listview}"/>
                     </Grid>
                 </ListView.Header>
 

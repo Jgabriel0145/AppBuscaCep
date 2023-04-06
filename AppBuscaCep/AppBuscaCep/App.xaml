@@ -10,5 +10,12 @@
             <Setter Property="FontSize" Value="20" />
         </Style>
 
+        <Style x:Key="lbl_Titulo_listview" TargetType="Label">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>

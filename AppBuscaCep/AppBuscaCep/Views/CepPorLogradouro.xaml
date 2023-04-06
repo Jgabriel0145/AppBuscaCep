@@ -15,10 +15,10 @@
             <ListView x:Name="lst_ceps">
                 <ListView.Header>
                     <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
-                        <Label Grid.Row="0" Grid.Column="0" Text="CEP"/>
-                        <Label Grid.Row="0" Grid.Column="1" Text="Logradouro"/>
-                        <Label Grid.Row="0" Grid.Column="2" Text="Cidade"/>
-                        <Label Grid.Row="0" Grid.Column="3" Text="UF"/>
+                        <Label Grid.Row="0" Grid.Column="0" Text="CEP" Style="{StaticResource lbl_Titulo_listview}"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="Logradouro" Style="{StaticResource lbl_Titulo_listview}"/>
+                        <Label Grid.Row="0" Grid.Column="2" Text="Cidade" Style="{StaticResource lbl_Titulo_listview}"/>
+                        <Label Grid.Row="0" Grid.Column="3" Text="UF" Style="{StaticResource lbl_Titulo_listview}"/>
                     </Grid>
                 </ListView.Header>
 
