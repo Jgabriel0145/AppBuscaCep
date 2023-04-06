@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical">
                 <SearchBar x:Name="txt_logradouro" Placeholder="Qual é a sua rua?"/>
                 <Button Text="Buscar" x:Name="btnBuscar" Clicked="btnBuscar_Clicked"/>
             </StackLayout>

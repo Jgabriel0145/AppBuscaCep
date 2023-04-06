@@ -4,7 +4,6 @@
              x:Class="AppBuscaCep.Views.BairrosPorCidade">
     <ContentPage.Content>
         <StackLayout>
-
             <StackLayout Orientation="Horizontal">
                 <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o estado...">
                     <Picker.Items>

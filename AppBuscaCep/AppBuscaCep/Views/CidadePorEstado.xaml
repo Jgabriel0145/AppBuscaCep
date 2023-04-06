@@ -3,6 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBuscaCep.Views.CidadePorEstado">
     <ContentPage.Content>
-        
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged" Title="Selecione o estado...">
+                    <Picker.Items>
+                        <x:String>AC</x:String>
+                        <x:String>AL</x:String>
+                        <x:String>AP</x:String>
+                        <x:String>AM</x:String>
+                        <x:String>BA</x:String>
+                        <x:String>CE</x:String>
+                        <x:String>ES</x:String>
+                        <x:String>GO</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>PA</x:String>
+                        <x:String>PB</x:String>
+                        <x:String>PR</x:String>
+                        <x:String>PE</x:String>
+                        <x:String>PI</x:String>
+                        <x:String>RJ</x:String>
+                        <x:String>RN</x:String>
+                        <x:String>RS</x:String>
+                        <x:String>RO</x:String>
+                        <x:String>RR</x:String>
+                        <x:String>SC</x:String>
+                        <x:String>SP</x:String>
+                        <x:String>SE</x:String>
+                        <x:String>TO</x:String>
+                        <x:String>DF</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout>
+                <ActivityIndicator x:Name="carregando" IsRunning="False" Color="Blue"/>
+
+                <ListView x:Name="lst_cidades">
+                    <ListView.Header>
+                        <Grid ColumnDefinitions="*, *" RowDefinitions="Auto">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Cidade" Style="{StaticResource lbl_Titulo_listview}"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="UF" Style="{StaticResource lbl_Titulo_listview}"/>
+                        </Grid>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ScrollView>
+                                    <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao}" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding uf}" 
+                                    </Grid>
+                                </ScrollView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
