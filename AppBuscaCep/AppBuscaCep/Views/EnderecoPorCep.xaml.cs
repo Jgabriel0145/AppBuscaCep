@@ -28,6 +28,8 @@ namespace AppBuscaCep.Views
                 Endereco end = await DataService.GetEnderecoByCep(txt_cep.Text);
 
                 this.BindingContext = end;
+
+                Console.WriteLine(end);
             }
             catch (Exception ex)
             {
