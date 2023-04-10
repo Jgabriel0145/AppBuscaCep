@@ -55,7 +55,7 @@
                                 <ScrollView>
                                     <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao}" HorizontalOptions="CenterAndExpand"/>
-                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding uf}" 
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding uf}" />
                                     </Grid>
                                 </ScrollView>
                             </ViewCell>
